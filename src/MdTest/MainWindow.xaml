@@ -1,0 +1,33 @@
+﻿<Window x:Class="MdTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MdTest"
+        xmlns:md="clr-namespace:EleCho.MdViewer;assembly=EleCho.MdViewer"
+        mc:Ignorable="d"
+        Background="Black"
+        Foreground="White"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="MdEditor"
+                 Grid.Column="0"
+                 Background="Black"
+                 Foreground="White"
+                 AcceptsReturn="True"
+                 AcceptsTab="True"
+                 TextWrapping="Wrap"
+                 d:IsHidden="True" />
+        <ScrollViewer Grid.Column="1">
+            <md:MarkdownViewer x:Name="MdViewer"
+                               Content="{Binding Text,ElementName=MdEditor}"
+                               Margin="8" />
+        </ScrollViewer>
+    </Grid>
+</Window>

@@ -1,0 +1,107 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mv="clr-namespace:EleCho.MdViewer"
+                    xmlns:md="clr-namespace:EleCho.MdViewer.Markdown">
+    <Style TargetType="{x:Type mv:MarkdownViewer}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="mv:MarkdownViewer">
+                    <ContentControl Content="{TemplateBinding RenderedContent}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Static md:ControlStyleKey.HyperlinkStyle}" TargetType="{x:Type Hyperlink}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver"
+                     Value="true">
+                <Setter Property="Foreground"
+                        Value="{DynamicResource {x:Static md:MarkdownResKey.LinkHover}}" />
+            </Trigger>
+            <Trigger Property="IsEnabled"
+                     Value="true">
+                <Setter Property="Cursor"
+                        Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Foreground"
+                Value="{DynamicResource {x:Static md:MarkdownResKey.Link}}" />
+        <Setter Property="TextDecorations"
+                Value="Underline" />
+    </Style>
+
+    <Style x:Key="{x:Static md:ControlStyleKey.CheckBoxStyle}"
+           TargetType="{x:Type CheckBox}">
+        <Setter Property="FocusVisualStyle"
+                Value="{x:Null}" />
+        <Setter Property="Background"
+                Value="{DynamicResource {x:Static md:MarkdownResKey.CommonControlMask}}" />
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource {x:Static md:MarkdownResKey.CommonControlBorder}}" />
+        <Setter Property="Foreground"
+                Value="{DynamicResource {x:Static md:MarkdownResKey.MainForeground}}" />
+        <Setter Property="Padding" 
+                Value="4 0 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid x:Name="templateRoot"
+                          Background="Transparent"
+                          SnapsToDevicePixels="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="checkBoxBorder"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="4"
+                                Margin="1"
+                                Width="16"
+                                Height="16">
+                            <Grid x:Name="markGrid">
+                                <Path x:Name="optionMark"
+                                      Data="F1 M 9.97498,1.22334L 4.6983,9.09834L 4.52164,9.09834L 0,5.19331L 1.27664,3.52165L 4.255,6.08833L 8.33331,1.52588e-005L 9.97498,1.22334 Z "
+                                      Fill="{TemplateBinding Foreground}"
+                                      Margin="3"
+                                      Opacity="0"
+                                      Stretch="Uniform" />
+                                <Rectangle x:Name="indeterminateMark"
+                                           Fill="{TemplateBinding Foreground}"
+                                           Margin="2"
+                                           Opacity="0" />
+                            </Grid>
+                        </Border>
+                        <ContentPresenter x:Name="contentPresenter"
+                                          Grid.Column="1"
+                                          Focusable="False"
+                                          HorizontalAlignment="Left"
+                                          Margin="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="True"
+                                          VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasContent"
+                                 Value="true">
+                            <Setter Property="Padding"
+                                    Value="4,-1,0,0" />
+                        </Trigger>
+                        <Trigger Property="IsChecked"
+                                 Value="true">
+                            <Setter Property="Opacity"
+                                    TargetName="optionMark"
+                                    Value="1" />
+                            <Setter Property="Opacity"
+                                    TargetName="indeterminateMark"
+                                    Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

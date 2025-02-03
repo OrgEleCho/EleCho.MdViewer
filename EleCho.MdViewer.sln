@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35617.110 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EleCho.MdViewer", "src\EleCho.MdViewer\EleCho.MdViewer.csproj", "{596C946D-6105-0155-6027-A60D28B5A46A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MdTest", "src\MdTest\MdTest.csproj", "{7774E67D-5655-66FF-EDE3-928AA28BA8DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{596C946D-6105-0155-6027-A60D28B5A46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596C946D-6105-0155-6027-A60D28B5A46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596C946D-6105-0155-6027-A60D28B5A46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596C946D-6105-0155-6027-A60D28B5A46A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7774E67D-5655-66FF-EDE3-928AA28BA8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7774E67D-5655-66FF-EDE3-928AA28BA8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7774E67D-5655-66FF-EDE3-928AA28BA8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7774E67D-5655-66FF-EDE3-928AA28BA8DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C42A4E7-8BE6-424F-BE4B-BD5B9206B8BD}
+	EndGlobalSection
+EndGlobal
