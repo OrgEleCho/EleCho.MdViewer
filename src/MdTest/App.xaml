@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <mu:ControlsDictionary />
-                <mu:ThemeDictionary ColorMode="Dark"/>
+                <ResourceDictionary Source="/CustomStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

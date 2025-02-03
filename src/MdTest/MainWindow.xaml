@@ -6,8 +6,6 @@
         xmlns:local="clr-namespace:MdTest"
         xmlns:md="clr-namespace:EleCho.MdViewer;assembly=EleCho.MdViewer"
         mc:Ignorable="d"
-        Background="Black"
-        Foreground="White"
         Title="MainWindow"
         Height="450"
         Width="800">
@@ -18,8 +16,6 @@
         </Grid.ColumnDefinitions>
         <TextBox x:Name="MdEditor"
                  Grid.Column="0"
-                 Background="Black"
-                 Foreground="White"
                  AcceptsReturn="True"
                  AcceptsTab="True"
                  TextWrapping="Wrap"

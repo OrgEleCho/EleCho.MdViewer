@@ -18,13 +18,17 @@ xmlns:md="clr-namespace:EleCho.MdViewer;assembly=EleCho.MdViewer"
 ```
 3. 使用MdViewer控件
 ```xml
-<ScrollViewer Grid.Column="1">
+<ScrollViewer>
     <md:MarkdownViewer x:Name="MdViewer"
                        Content="{Binding Markdown}"/>
 </ScrollViewer>
 ```
 
+## 定制主题
+配置参考[/src/MdTest/CustomStyle.xaml](https://github.com/OrgEleCho/EleCho.MdViewer/blob/master/src/MdTest/CustomStyle.xaml)，
+在资源字典处替换```<mu:ThemeDictionary ColorMode="Dark"/>```即可。
+
 ## 示例
-见测试项目/src/MdTest  
-![light](https://github.com/OrgEleCho/EleCho.MdViewer/assets/example_light.png)  
-![dark](https://github.com/OrgEleCho/EleCho.MdViewer/assets/example_dark.png)
+见测试项目[/src/MdTest](https://github.com/OrgEleCho/EleCho.MdViewer/tree/master/src/MdTest) 
+![light](https://raw.githubusercontent.com/OrgEleCho/EleCho.MdViewer/refs/heads/master/assets/example_light.png)  
+![dark](https://raw.githubusercontent.com/OrgEleCho/EleCho.MdViewer/refs/heads/master/assets/example_dark.png)
